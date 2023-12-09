@@ -1093,10 +1093,9 @@ exec("""def SPN_return(txt):
 print("****************************** SEPYNODEv0.5.4.pre-0.file_runner ******************************")
 
 run_setup("import \"SEPYNODE.spn\";", basic)
-input_p = "tests.spn"#input("file: ")
+input_p = input("file: ")
 with open(input_p, "r") as file:
     input_p = file.read()
-    import time
-    st = time.time()
     run_setup(input_p.replace('\n', '').replace("\\n", "\n"), basic)
-    print(f"time: {time.time() - st}s")
+
+#needed sepynode.spn file for pre-build funtions
